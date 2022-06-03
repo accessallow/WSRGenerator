@@ -1,0 +1,368 @@
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"
+    ></script>
+
+    <style>
+        html *
+        {
+            font-size: 9pt !important;
+            color: #000 !important;
+            font-family: Arial !important;
+        }
+        .brown-color * {
+            color:white !important;
+            background-color: #554848;
+        }
+        .yellow-color * {
+            color:black !important;
+            background-color: #eec93c;
+        }
+        .epic-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+
+        .plan-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+        .issue-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+        .white{
+            background-color: #554848;
+            color:white !important;
+            margin-right:10px;
+        }
+        .green-status{
+            background-color: green;
+        }
+        .amber-status{
+            background-color: rgb(235, 211, 105);
+        }
+        .red-status{
+            background-color: red;
+        }
+    </style>
+</head>
+<script>
+    var edit = false;
+    function editableToggle(){
+        edit = !edit;
+        document.getElementById("detailTable").contentEditable = edit;
+    }
+</script>
+<body>
+<div class="container-fluid">
+
+    <table class="table table-bordered" id="detailTable">
+        <tr class="brown-color">
+            <td onclick="editableToggle()">Track</td>
+            <td class="col-md-5">Key Activities in This Week</td>
+            <!-- <td>Progress</td>
+            <td>ETA</td> -->
+            <td class="col-md-4">Deliverables & Value Adds in This Week</td>
+            <td>Plan For Next Week</td>
+            <td>Issue/Risks</td>
+            <td>Status</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;vertical-align: middle;">BPI</td>
+            <td>
+                <table class="table table-bordered">
+                    <tr class="brown-color">
+                        <td>Activity</td>
+                        <td style="width:6em;">Progress</td>
+                        <td style="width:6em;">ETA</td>
+                    </tr>
+
+                    <tr class="yellow-color">
+                        <td>BPI Development</td>
+                        <td>On-Track</td>
+                        <td>12th-Nov</td>
+                    </tr>
+
+                        <tr>
+                            <td><b>Project Support Items (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-275" target="_blank">BPINV-275</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9610" target="_blank">BPINV-9610</a> - Add ObjectBrowser as default browser into UI archetype</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9366" target="_blank">BPINV-9366</a> - LAG Interface can no longer be deleted</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9621" target="_blank">BPINV-9621</a> - Metadata Modeler - Saving library to JSON failing without any error</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9318" target="_blank">BPINV-9318</a> - INS (Network Discovery) - Plugin Cannot Distinguish Position Matching for Cards With Identical Slot and Subslot</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9768" target="_blank">BPINV-9768</a> - Connection Page general Panel fields Issue</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9591" target="_blank">BPINV-9591</a> - Performance Issue when accessing History for some devices</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>BPI 22.02 - TMF 639 Extensions for custom query, logical write and notifications (Engineering Epic) (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9533" target="_blank">BPINV-9533</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9856" target="_blank">BPINV-9856</a> - POC - cover activity impact using bookmarking attributes</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9839" target="_blank">BPINV-9839</a> - POC - readonly UI support for TMF-639 resource characteristics</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9876" target="_blank">BPINV-9876</a> - POC - TMF-639 notifications on federation</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9876" target="_blank">BPINV-9876</a> - POC - TMF-639 notifications on federation</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>Manage both Spares and Assets in BPI (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9488" target="_blank">BPINV-9488</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9836" target="_blank">BPINV-9836</a> - Asset Management: API to support CRUD operations on Assets and Spares</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9832" target="_blank">BPINV-9832</a> - Asset Management: Metadata Model changes for Spares and Asset</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9834" target="_blank">BPINV-9834</a> - Asset Management: Tree Browser Support for Asset and Spares</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>Devops activities (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-5596" target="_blank">BPINV-5596</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9785" target="_blank">BPINV-9785</a> - Nightly build failing for 22.02 and latest changes are not getting deployed.</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9764" target="_blank">BPINV-9764</a> - Improvements in upgrade job</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9887" target="_blank">BPINV-9887</a> - Create fresh 21.10 single BPI env with enabled Flexera license feature</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>Support Federation of External Properties for 5G, NFV and other areas (Engineering Epic) (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9631" target="_blank">BPINV-9631</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9934" target="_blank">BPINV-9934</a> - POC - on app-server side DROOLs</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>BPI Test issues (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-4880" target="_blank">BPINV-4880</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-7780" target="_blank">BPINV-7780</a> - DEV - Junit tests are breaking</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9363" target="_blank">BPINV-9363</a> - Some metadata relationships have no drniId</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-7858" target="_blank">BPINV-7858</a> - Unable to route VLAN connection over Ethernet in RPS</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9892" target="_blank">BPINV-9892</a> - TMF638 | Dish - Customer ID gets converted into decimal format in the response output</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>Connection backlog stories (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-5441" target="_blank">BPINV-5441</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9544" target="_blank">BPINV-9544</a> - Documentation - Update Ethernet technical documentation </td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>Full Support for TMF 639 (v3) (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-7888" target="_blank">BPINV-7888</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9314" target="_blank">BPINV-9314</a> - Update \TMF REST API Technical Guide\ for 21.10</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>BPI 22.02 - API KPI for BPI 21.10 GA release (Engineering Epic) (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9634" target="_blank">BPINV-9634</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9751" target="_blank">BPINV-9751</a> - Analysis - automate scale data suite and fix library duplication issues</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+                        <tr>
+                            <td><b>21.02 BPI Order Management (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-4700" target="_blank">BPINV-4700</a>)</b></td>
+                            <td><b>On-Track</b></td>
+                            <td><b>12th-Nov</b></td>
+                        </tr>
+                            <tr>
+                                <td><a href="https://agile-jira.ciena.com/browse/BPINV-9870" target="_blank">BPINV-9870</a> - Order Management -  Buttons 'Expand Full Table' , 'Collapse Full Table' , 'Clear Selection'  and 'Select All For Adoption' - are not functional</td>
+                                <td>On-Track</td>
+                                <td>12th-Nov</td>
+                            </tr>
+
+                    <tr class="yellow-color">
+                        <td>BPI Testing</td>
+                        <td>On-Track</td>
+                        <td>12th-Nov</td>
+                    </tr>
+
+
+
+                </table>
+            </td>
+            <td>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>Project Support Items (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-275" target="_blank">BPINV-275</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9551" target="_blank">BPINV-9551</a> - (Object type: Connection protection , Object Class - Scope  created as a part of CIN  , there are corresponding objects called scope stays in Planned status </td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9604" target="_blank">BPINV-9604</a> - Connection Summary not Displayed correctly when using devices created from eqiupment template</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9604" target="_blank">BPINV-9604</a> - Connection Summary not Displayed correctly when using devices created from eqiupment template</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>Device: Modify Card Type (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-6065" target="_blank">BPINV-6065</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9800" target="_blank">BPINV-9800</a> - Modify card dialog Error: \Cannot read property 'objectId' of undefined\</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>Manage both Spares and Assets in BPI (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9488" target="_blank">BPINV-9488</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9833" target="_blank">BPINV-9833</a> - Asset Management: Activity for Asset Management Role and Permission</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>Devops activities (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-5596" target="_blank">BPINV-5596</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9790" target="_blank">BPINV-9790</a> - Create new 21.10 Environment for BPINV-9709</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9557" target="_blank">BPINV-9557</a> - DevOps KT & Confluence Walkthrough</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9816" target="_blank">BPINV-9816</a> - Create multiple hosts Discovery-BPI 21.06 envs to test HDM Upgrade from 21.06 to 21.10</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9852" target="_blank">BPINV-9852</a> - Create multiple hosts SOO-BPI 21.06 envs to test HDM Upgrade from 21.06 to 21.10</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9814" target="_blank">BPINV-9814</a> - Create release environment for 20.10.9</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>BPI Test issues (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-4880" target="_blank">BPINV-4880</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9762" target="_blank">BPINV-9762</a> - Plan and Live Merge perspective in the tree</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9709" target="_blank">BPINV-9709</a> - INS Discovery: Devices are not getting discovered.</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-8841" target="_blank">BPINV-8841</a> - Device template - Completing order not moved related to template cards to 'In Service'</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9765" target="_blank">BPINV-9765</a> - Upgrade 21.06 to 21.10 without GR > Patch cable connections are duplicated</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9789" target="_blank">BPINV-9789</a> - Tabbed Data Grid Report not working</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped epic-table">
+                        <tr><td>Test BPI upgrades to 21.10 release (Epic - <a href="https://agile-jira.ciena.com/browse/BPINV-9810" target="_blank">BPINV-9810</a>)</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9820" target="_blank">BPINV-9820</a> - Test single BPI GR upgrade from 21.06 to 21.10 - Same host</td></tr>
+                            <tr><td><a href="https://agile-jira.ciena.com/browse/BPINV-9821" target="_blank">BPINV-9821</a> - Test Discovery-BPI GR upgrade from 21.06 to 21.10 - Same host</td></tr>
+                    </table>
+
+            </td>
+            <td>
+
+                    <table class="table table-bordered table-striped plan-table">
+                        <tr><td>BPI Development</td></tr>
+                            <tr><td><span class="badge white">1</span>22.02 Epic devlopment</td></tr>
+                            <tr><td><span class="badge white">2</span>22.10 Bug fixes</td></tr>
+                            <tr><td><span class="badge white">3</span>Project Support Issues</td></tr>
+                            <tr><td><span class="badge white">4</span>DevOps Stories</td></tr>
+                    </table>
+                    <table class="table table-bordered table-striped plan-table">
+                        <tr><td>BPI Testing</td></tr>
+                            <tr><td><span class="badge white">1</span>Automation of Fusion Core</td></tr>
+                            <tr><td><span class="badge white">2</span>21.10 Testing/Automation</td></tr>
+                    </table>
+
+            </td>
+            <td>
+
+                    <table class="table table-bordered table-striped issue-table">
+                        <tr><td>BPI Development</td></tr>
+                            <tr><td><span class="badge white">1</span>21.10 Epic devlopment</td></tr>
+                            <tr><td><span class="badge white">2</span>Project Support Issues</td></tr>
+                            <tr><td><span class="badge white">3</span>DevOps Stories</td></tr>
+                    </table>
+
+            </td>
+            <td class="green-status">
+
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+
+
+</body>
+</html>

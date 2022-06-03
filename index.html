@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+        html *
+            {
+            font-size: 9pt !important;
+            color: #000 !important;
+            font-family: Arial !important;
+            }
+        .brown-color * {
+            color:white !important;
+            background-color: #554848;
+        }
+        .epic-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+
+        .plan-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+        .issue-table tr:nth-child(1) *{
+            color:white !important;
+            background-color: #554848;
+        }
+        .white{
+            background-color: #554848;
+            color:white !important;
+            margin-right:10px;
+        }
+
+        .green-status{
+            background-color: green;
+        }
+        .amber-status{
+            background-color: rgb(235, 211, 105);
+        }
+        .red-status{
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+        <div class="container-fluid">
+
+            <table class="table table-bordered">
+                <tr class="brown-color">
+                    <td>Track</td>
+                    <td class="col-md-5">Key Activities in This Week</td>
+                    <!-- <td>Progress</td>
+                    <td>ETA</td> -->
+                    <td class="col-md-4">Deliverables & Value Adds in This Week</td>
+                    <td>Plan For Next Week</td>
+                    <td>Issue/Risks</td>
+                    <td>Status</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;vertical-align: middle;">BPI</td>
+                    <td>
+                        <table class="table table-bordered">
+                            <tr class="brown-color">
+                                <td>Activity</td>
+                                <td>Progress</td>
+                                <td>ETA</td>
+                            </tr>
+                            <tr>
+                                <td>BPINV-8354 - Documentation - SDK samples for customization in BPI</td>
+                                <td>On-Track</td>
+                                <td>29th Oct</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table class="table table-bordered table-striped epic-table">
+                            <tr><td>BPI Test Issues (Epic - BPINV-4480)</td></tr>
+                            <tr><td>BPINV-9381 - Metadata Manager: Create Metadata Page - Validation errors color</td></tr>
+                            <tr><td>BPINV-8281 - Replace routing form's height</td></tr>
+                        </table>
+
+                        <table class="table table-bordered table-striped epic-table">
+                            <tr><td>BPI Test Issues (Epic - BPINV-4480)</td></tr>
+                            <tr><td>BPINV-9381 - Metadata Manager: Create Metadata Page - Validation errors color</td></tr>
+                            <tr><td>BPINV-8281 - Replace routing form's height</td></tr>
+                        </table>
+
+                    </td>
+                    <td>   
+
+    <table class="table table-bordered table-striped plan-table">
+        <tr><td>BPI Development</td></tr>
+        <tr><td><span class="badge white">1</span>  21.10 Epic devlopment</td></tr>
+        <tr><td><span class="badge white">2</span> Project Support Issues</td></tr>
+        <tr><td><span class="badge white">3</span> DevOps Stories</td></tr>
+    </table>
+
+    <table class="table table-bordered table-striped plan-table">
+        <tr><td>BPI Development</td></tr>
+        <tr><td><span class="badge white">1</span>  21.10 Epic devlopment</td></tr>
+        <tr><td><span class="badge white">2</span> Project Support Issues</td></tr>
+        <tr><td><span class="badge white">3</span> DevOps Stories</td></tr>
+    </table>
+
+
+                    </td>
+                    <td>
+                        <table class="table table-bordered table-striped issue-table">
+                            <tr><td>BPI Development</td></tr>
+                            <tr><td><span class="badge white">1</span>  21.10 Epic devlopment</td></tr>
+                            <tr><td><span class="badge white">2</span> Project Support Issues</td></tr>
+                            <tr><td><span class="badge white">3</span> DevOps Stories</td></tr>
+                        </table>
+
+                    </td>
+                    <td class="green-status">
+                        
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+       
+
+  </body>
+</html>
